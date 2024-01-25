@@ -4,8 +4,8 @@ def fizzbuzz():
         if (n%3 == 0 and n%5 != 0):
             print("Fizz ", end="")
         elif (n%3 != 0 and n%5 == 0):
-            print("Fuzz ", end="")
+            print("Buzz ", end="")
         elif (n%3 == 0 and n%5 == 0):
-            print("FizzFuzz ", end="")
+            print("FizzBuzz ", end="")
         else:
             print("{} ".format(n), end="")
