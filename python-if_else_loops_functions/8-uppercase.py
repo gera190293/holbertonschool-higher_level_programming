@@ -8,6 +8,6 @@ def getUpperChar(c):
 
 def uppercase(str):
   for n in str:
-    print("{}".format(getUpperChar(n)), end=""))
+    print("{}".format(getUpperChar(n)), end="")
 
   print("")
