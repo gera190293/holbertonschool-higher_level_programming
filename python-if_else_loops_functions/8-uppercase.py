@@ -5,6 +5,6 @@ def getUpperChar(c):
     else:
         return c
 def uppercase(str):
-	for n in str:
-		print("{}".format(getUpperChar(n)), end="")
-	print("")
+    for n in str:
+        print("{}".format(getUpperChar(n)), end="")
+    print("")
