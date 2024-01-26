@@ -2,7 +2,7 @@
 
 def getUpperChar(c):
     if ord(c) >= 97 and ord(c) <= 122:
-      return ord(c - 32)
+      return chr(ord(c) - 32)
     else:
       return c
 
