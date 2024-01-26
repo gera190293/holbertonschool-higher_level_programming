@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 def getUpperChar(c):
-    if ord(n) >= 97 and ord(n) <= 122:
-      return char(ord(n - 32))
+    if ord(c) >= 97 and ord(c) <= 122:
+      return char(ord(c - 32))
     else:
       return c
 
