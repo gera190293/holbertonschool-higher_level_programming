@@ -9,5 +9,5 @@ if argc == 0:
 else:
     sum = 0
     for n in range(1, argc + 1):
-        sum += sys.argv[n]
+        sum += int(sys.argv[n])
     print("{}".format(sum))
