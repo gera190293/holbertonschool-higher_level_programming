@@ -11,3 +11,4 @@ else:
     for n in range(1, argc + 1):
         sum += int(sys.argv[n])
     print("{}".format(sum))
+    
