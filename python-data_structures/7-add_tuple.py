@@ -8,8 +8,9 @@ def chklen(tuple_x=()):
         return newt
     else:
         newt = (0, 0)
-        return newt     
-       
+        return newt
+
+
 def add_tuple(tuple_a=(), tuple_b=()):
     t_a = tuple(chklen(tuple_a))
     t_b = tuple(chklen(tuple_b))
