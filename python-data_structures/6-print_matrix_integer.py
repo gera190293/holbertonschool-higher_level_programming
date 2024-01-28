@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 
+def print_list_integer(my_list=[]):
+    n = 0
+    for n in range(len(my_list)):
+        print("{:d}".format(my_list[n]), end=" ")
+
+
 def print_matrix_integer(matrix=[[]]):
     n = 0
     for n in range(len(matrix)):
-        print("{}".format(matrix[n]))
+        print("{}".format(print_list_integer(matrix[n])))
