@@ -6,4 +6,5 @@ def multiply_by_2(a_dictionary):
     for n in set(a_dictionary):
         m = a_dictionary[n] * 2
         new_dic[n] = m
-    return new_dic               
+    return new_dic
+    
