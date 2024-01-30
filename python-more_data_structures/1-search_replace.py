@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 def search_replace(my_list, search, replace):
+    if my_list == []:
+        return None
     new_list = []
     print(len(my_list))
     for i in range(len(my_list)):
@@ -10,4 +12,3 @@ def search_replace(my_list, search, replace):
             n = int(my_list[i])
             new_list.append(n)
     return new_list
-
