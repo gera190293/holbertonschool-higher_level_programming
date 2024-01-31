@@ -18,16 +18,15 @@ def sum(n):
 
 
 def roman_to_int(roman_string):
-    i = 0
     number = 0
     if roman_string == "":
         return None
     else:
-        for i in range(len(roman_string) - 1):
+        for i in range(len(roman_string)):
             rc = roman_string[i]
             rv = sum(rc)
             if i < len(roman_string) - 1 and rv < sum(roman_string[i + 1]):
-                number -= 2 * rv
+                number -= rv
             else:
                 number += rv
     return number
