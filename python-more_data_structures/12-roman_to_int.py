@@ -19,8 +19,8 @@ def sum(n):
 
 def roman_to_int(roman_string):
     number = 0
-    if roman_string == "":
-        return None
+    if roman_string == "" or type(roman_string) != str:
+        return 0
     else:
         for i in range(len(roman_string)):
             rc = roman_string[i]
