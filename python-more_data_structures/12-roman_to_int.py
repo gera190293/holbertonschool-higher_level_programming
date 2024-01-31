@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+
+def sum(n):
+    if n == "M":
+        return 1000
+    elif n == "D":
+        return 500
+    elif n == "C":
+        return 100
+    elif n == "L":
+        return 50
+    elif n == "X":
+        return 10
+    elif n == "V":
+        return 5
+    else:
+        return 1
+
+
+def roman_to_int(roman_string):
+    i = 0
+    number = 0
+    if roman_string == "":
+        return None
+    else:
+        for i in range(len(roman_string) - 1):
+            rc = roman_string[i]
+            rv = sum(rc)
+            if i < len(roman_string) - 1 and rv < sum(roman_string[i + 1]):
+                number -= 2 * rv
+            else:
+                number += rv
+    return number
