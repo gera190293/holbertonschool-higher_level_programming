@@ -23,7 +23,8 @@ def roman_to_int(roman_string):
     else:
         for i in range(len(roman_string)):
             current_value = roman_value(roman_string[i])
-            if i < len(roman_string) - 1 and current_value < roman_value(roman_string[i + 1]):
+            if (i < len(roman_string) - 1 and 
+                current_value < roman_value(roman_string[i + 1])):
                 number -= current_value
             else:
                 number += current_value
