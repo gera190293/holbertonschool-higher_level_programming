@@ -5,8 +5,10 @@ def lookup(obj):
     """
     Returns the list of available attributes and methods of an object.
 
-    :param obj: The object to inspect
-    :return: A list of strings representing the names of the attributes and methods
+    :param obj: The object to inspect.
+    :type obj: any
+    :return: A list of strings representing the names of the attributes and methods.
+    :rtype: list
     """
     
     return dir(obj)
