@@ -1,0 +1,23 @@
+"my_list" module
+---------------
+
+Using "my_list"
+
+Import "my_list" from "my_list" module:
+    >>> my_list = __import__('1-my_list').my_list
+
+Next, use:
+    """Print unsorted elements"""
+    >>> my_list = MyList([3, 1, 4, 9, 2, 5])
+
+    """Print empty list"""
+    >>> my_list = MyList()
+
+    """Print negative elements"""
+    >>> my_list = MyList([-5, -2, -7, -4, -9])
+
+    """Print a single element"""
+    >>> my_list = MyList([98])
+
+    """Print duplicated elements"""
+    >>> my_list = MyList([2, 2, 8, 8, 5, 5, 3, 6])
