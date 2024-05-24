@@ -5,9 +5,14 @@ This module provides utilities for inspecting Python objects.
 """
 
 
-class Mylist(list):
+class MyList(list):
+    
     """
     A subclass of list
+    
+     Methods:
+        print_sorted(self):
+            Prints the list in ascending order.
     """
     
     
