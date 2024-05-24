@@ -20,4 +20,5 @@ class MyList(list):
         """
         Prints the list in ascending order
         """
-        print(int(sorted(self)))
+        print(sorted(self))
+        
