@@ -1,28 +1,26 @@
 #!/usr/bin/python3
 
-"""Abstract Base Classes excercises"""
+"""Abstract Base Classes exercises"""
 from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
     """Animal class"""
-    pass
-    
+
     @abstractmethod
     def sound(self):
-        """abstract method"""
+        """Abstract method to define animal sounds"""
+        pass
 
-class dog(Animal):
-    """Subclass dog"""
-    pass
-    
+class Dog(Animal):
+    """Subclass Dog"""
+
     def sound(self):
         """Sound method"""
         return "Bark"
 
-class cat(Animal):
-    """subclass cat"""
-    pass
+class Cat(Animal):
+    """Subclass Cat"""
 
     def sound(self):
         """Sound method"""
