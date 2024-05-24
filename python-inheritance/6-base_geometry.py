@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 
 """
-This module provides BaseGeometry class
+This module provides the BaseGeometry class.
 """
 
-
 class BaseGeometry:
-    """empty BaseGeometry class"""
+    """A class representing geometric shapes."""
 
     def area(self):
-        """Public instance to calculate area
-        
-        Raise:
-            Exception: the area is not implemented yet
         """
-    raise Exception("area() is not implemented")
+        Public instance method to calculate area.
+
+        Raises:
+            Exception: Indicates that the area method is not implemented.
+        """
+        raise Exception("area() is not implemented")
