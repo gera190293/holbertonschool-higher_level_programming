@@ -4,6 +4,7 @@
 This module provides the BaseGeometry class.
 """
 
+
 class BaseGeometry:
     """A class representing geometric shapes."""
 
