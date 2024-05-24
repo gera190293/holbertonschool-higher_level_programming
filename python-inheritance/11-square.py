@@ -23,6 +23,6 @@ class Square(Rectangle):
         """
         return self.__size ** 2
 
-    def __str__(slef):
+    def __str__(self):
         """Implement print behavior"""
         return "[Square] {:d}/{:d}".format(self.__size, self.__size)
