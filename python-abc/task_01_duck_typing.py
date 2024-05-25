@@ -30,8 +30,8 @@ class Circle(Shape):
         """area method with radius"""
         return math.pi * (self.radius ** 2)
 
-    def area(self):
-        """area method with perimeter"""
+    def perimeter(self):
+        """perimeter method with radius"""
         return 2 * math.pi * self.radius
 
 
@@ -58,6 +58,6 @@ def shape_info(shape):
         area = shape.area()
         perimeter = shape.perimeter()
         print(f"Area: {area}")
-        print(f"Perimter: {perimeter}")
+        print(f"Perimeter: {perimeter}")
     except AttributeError:
         print("The provided shape does not implement required methods.")
