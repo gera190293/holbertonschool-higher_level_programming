@@ -17,7 +17,7 @@ class Shape(ABC):
     def perimeter(self):
         """abstract perimeter method"""
         pass
-
+    
 
 class Circle(Shape):
     """Circle class inheritance from shape"""
@@ -50,3 +50,14 @@ class Rectangle(Shape):
     def perimeter(self):
         """perimeter method for Rectangle"""
         return 2 * (self.width + self.height)
+
+
+def shape_info(shape):
+    """print the info of the shape"""
+    try:
+        area = shape.area()
+        perimeter = shape.perimeter()
+        print(f"Area: {area}")
+        print(f"Perimter: {perimeter}")
+    except AttributeError:
+        print("The provided shape does not implement required methods.")
