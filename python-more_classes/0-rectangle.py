@@ -7,8 +7,7 @@ Initialize a new Rectangle instance.
 :param height: The height of the rectangle
 """
 
+
 class Rectangle():
-    
     """Empty Rectangle class"""
-    
     pass
