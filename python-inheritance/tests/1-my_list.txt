@@ -1,23 +1,86 @@
-"my_list" module
----------------
+The ``MyList`` module
+==========================
 
-Using "my_list"
+Using ``MyList``
+---------------------
 
-Import "my_list" from "my_list" module:
-    >>> my_list = __import__('1-my_list').my_list
+First import ``MyList`` from the ``MyList`` module:
 
-Next, use:
-    """Print unsorted elements"""
-    >>> my_list = MyList([3, 1, 4, 9, 2, 5])
+	>>> MyList = __import__('1-my_list').MyList
 
-    """Print empty list"""
-    >>> my_list = MyList()
+Now use it:
 
-    """Print negative elements"""
-    >>> my_list = MyList([-5, -2, -7, -4, -9])
+	>>> my_list = MyList([1, 2, 4, 3, 5])
+	>>> print(my_list)
+	[1, 2, 4, 3, 5]
+	>>> my_list.append(6)
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5, 6]
+	>>> print(my_list)
+	[1, 2, 4, 3, 5, 6]
 
-    """Print a single element"""
-    >>> my_list = MyList([98])
+	>>> my_list = MyList()
+	>>> type(my_list)
+	<class '1-my_list.MyList'>
 
-    """Print duplicated elements"""
-    >>> my_list = MyList([2, 2, 8, 8, 5, 5, 3, 6])
+	>>> issubclass(MyList, list)
+	True
+
+	>>> 'print_sorted' in dir(MyList)
+	True
+
+	>>> my_list = MyList([4, 2, 3, 1, 5])
+	>>> print(my_list)
+	[4, 2, 3, 1, 5]
+
+	>>> my_list = MyList([4, 2, 3, 1, 5])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> my_list = MyList([-4, 2, 3, 1, 5])
+	>>> my_list.print_sorted()
+	[-4, 1, 2, 3, 5]
+
+	>>> my_list = MyList([1, 2, 3, 4, 5])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> my_list = MyList([1])
+	>>> my_list.print_sorted()
+	[1]
+
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+
+	>>> my_list = MyList([])
+	>>> my_list.print_sorted()
+	[]
+
+	>>> my_list = MyList(["c", "d", "a", "e", "b"])
+	>>> my_list.print_sorted()
+	['a', 'b', 'c', 'd', 'e']
+
+	>>> my_list = MyList([1.1, 3.3, 4.4, 2.2, 5.5])
+	>>> my_list.print_sorted()
+	[1.1, 2.2, 3.3, 4.4, 5.5]
+
+	>>> my_list = MyList([-1, -3, -4, -2, -5])
+	>>> my_list.print_sorted()
+	[-5, -4, -3, -2, -1]
+
+	>>> my_list = MyList(1)
+	Traceback (most recent call last):
+	...
+	TypeError: 'int' object is not iterable
+
+	>>> my_list = MyList([1, "a"])
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	...
+	TypeError: unorderable types: str() < int()
+
+	>>> my_list.print_sorted([3, 1, 2])
+	Traceback (most recent call last):
+	...
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
