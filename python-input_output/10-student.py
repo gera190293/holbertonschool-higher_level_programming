@@ -25,16 +25,22 @@ class Student:
         """
         Retrieves a dictionary representation of a Student instance.
 
-        This method returns a dictionary containing all attributes of the
-        Student instance that are of a simple data structure type (list, dict,
-        string, integer, or boolean).
+        If attrs is a list of strings, only attribute names contained in
+        this list will be retrieved. Otherwise, all attributes will be retrieved.
+
+        Args:
+            attrs (list, optional): List of attribute names to include in the
+                                    dictionary representation. Defaults to None.
 
         Returns:
             dict: A dictionary representation of the Student instance.
         """
         if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            return {key: value for key, value in self.__dict__.items()
-                if key in attrs}
+            return {
+                key: value for key, value in self.__dict__.items() if key in attrs
+            }
         else:
-            return {key: value for key, value in self.__dict__.items()
-                if isinstance(value, (list, dict, str, int, bool))}
+            return {
+                key: value for key, value in self.__dict__.items()
+                if isinstance(value, (list, dict, str, int, bool))
+            }
