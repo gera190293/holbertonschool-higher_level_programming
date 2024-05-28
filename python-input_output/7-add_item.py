@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-
-"""This is a Python - Input/Output module exercise."""
 import os
 import sys
 from 5-save_to_json_file import save_to_json_file
