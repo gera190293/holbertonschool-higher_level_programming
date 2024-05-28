@@ -34,11 +34,3 @@ class Student:
         """
         return {key: value for key, value in self.__dict__.items()
                 if isinstance(value, (list, dict, str, int, bool))}
-
-
-# Example usage
-if __name__ == "__main__":
-    student = Student("John", "Doe", 23)
-    print(student.to_json())
-    # Output should be:
-    # {'first_name': 'John', 'last_name': 'Doe', 'age': 23}
