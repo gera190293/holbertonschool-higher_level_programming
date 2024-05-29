@@ -36,12 +36,9 @@ class Student:
         Returns:
             dict: A dictionary representation of the Student instance.
         """
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            return {
-                key: value for key, value in self.__dict__.items() if key in attrs
-            }
-        else:
-            return {
-                key: value for key, value in self.__dict__.items()
-                if isinstance(value, (list, dict, str, int, bool))
-            }
+        if (isinstance(attrs, list) and
+                all(isinstance(attr, str) for attr in attrs)):
+            return {key: value for key, value in self.__dict__.items()
+                    if key in attrs}
+        return {key: value for key, value in self.__dict__.items()
+                if isinstance(value, (list, dict, str, int, bool))}
