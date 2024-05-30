@@ -23,12 +23,8 @@ class CustomObject():
         try:
             with open(filename, 'wb') as f:
                 pickle.dump(self, f)
-        except FileNotFoundError:
-            print(f"Error: The file '{filename}' was not found.")
-        except PermissionError:
-            print(f"Error: Permission denied to write to the file '{filename}'.")
-        except pickle.PicklingError:
-            print(f"Error: The object could not be serialized.")
+        except (FileNotFoundError, PermissionError, pickle.PicklingError):
+            return None
 
     @classmethod
     def deserialize(cls, filename):
@@ -37,13 +33,6 @@ class CustomObject():
         try:
             with open(filename, 'rb') as f:
                 return pickle.load(f)
-        except FileNotFoundError:
-            print(f"The file '{filename}' was not found.")
-        except PermissionError:
-            print(f"Permission denied to read the file '{filename}'.")
-        except pickle.UnpicklingError:
-            print(f"The file '{filename}' does not contain a valid serialized object.")
-        except EOFError:
-            print(f"The file '{filename}' is empty or corrupted.")
-        except AttributeError:
-            print(f"The class definition required for deserialization is missing.")
+        except (FileNotFoundError, PermissionError, pickle.UnpicklingError,
+                EOFError, AttributeError):
+            return None
