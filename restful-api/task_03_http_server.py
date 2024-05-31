@@ -6,6 +6,7 @@ import json
 
 class BasicServer(http.server.BaseHTTPRequestHandler):
     """Class for a basic HTTP server management"""
+
     def do_GET(self):
         """Method to serve a sample JSON data
         when the endpoint /data is accessed"""
