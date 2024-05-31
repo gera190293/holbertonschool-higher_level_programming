@@ -28,7 +28,7 @@ class BasicServer(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b'Hello, this is a simple API!')
         else:
-            self.send_error(404, 'Not Found')
+            self.send_error(404, 'Endpoint not found')
 
 def run_server():
     """Function to run the server"""
