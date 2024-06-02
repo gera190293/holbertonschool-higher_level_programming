@@ -1,17 +1,15 @@
-#!/usr/bin/python3
-
-"""Module for RESTful API exercises"""
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
 users = {
-    "jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}
+    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
+    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}
 }
 
 @app.route('/')
 def home():
-    """Root URL returns a welcome message."""
+    """Root URL"""
     return "Welcome to the Flask API!"
 
 @app.route('/data')
@@ -21,7 +19,7 @@ def data():
 
 @app.route('/status')
 def status():
-    """Return status"""
+    """Return the status"""
     return "OK"
 
 @app.route('/users/<username>')
@@ -35,7 +33,7 @@ def get_user(username):
 
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    """Add a new user"""
+    """Add a new user from JSON data"""
     data = request.get_json()
     username = data.get("username")
     if not username:
@@ -44,6 +42,7 @@ def add_user():
         return jsonify({"error": "User already exists"}), 400
 
     user_data = {
+        "username": username,
         "name": data.get("name"),
         "age": data.get("age"),
         "city": data.get("city")
