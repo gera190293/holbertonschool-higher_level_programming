@@ -1,5 +1,4 @@
 -- prints the following description of a table
-SHOW COLUMNS FROM first_table
 SELECT 
     COLUMN_NAME AS 'Column Name', 
     COLUMN_TYPE AS 'Column Type', 
