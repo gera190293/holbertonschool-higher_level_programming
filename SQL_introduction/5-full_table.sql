@@ -1,2 +1,2 @@
 -- prints the following description of a table
-SHOW CREATE TABLE 'first_table';
+SELECT * FROM first_table
