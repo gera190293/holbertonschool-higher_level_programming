@@ -1,5 +1,5 @@
 -- creates a table second_table in the database
-IF NOT second_table
+IF NOT EXISTS second_table;
     CREATE TABLE second_table (
         id INT,
         name VARCHAR(256),
