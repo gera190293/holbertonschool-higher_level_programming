@@ -1,7 +1,2 @@
 -- prints the following description of a table
-SELECT *
-FROM 
-    INFORMATION_SCHEMA.COLUMNS 
-WHERE 
-    TABLE_SCHEMA = DATABASE() 
-    AND TABLE_NAME = 'first_table';
+Select * From INFORMATION_SCHEMA.COLUMNS Where TABLE_NAME = 'first_table'
