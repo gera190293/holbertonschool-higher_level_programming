@@ -1,4 +1,4 @@
--- Lists all genres from hbtn_0d_tvshows and the number of shows linked to each.
+-- Lists all genres from hbtn_0d_tvshows and the number of shows linked to each
 
   SELECT g.name AS genre, COUNT(sg.genre_id) AS number_of_shows
     FROM tv_genres g
