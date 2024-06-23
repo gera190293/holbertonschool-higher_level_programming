@@ -1,4 +1,4 @@
--- Lists all shows from hbtn_0d_tvshows that have at least one genre linked.
+-- Lists all shows from hbtn_0d_tvshows that have at least one genre linked
 
     SELECT s.title, g.genre_id
       FROM tv_shows s
